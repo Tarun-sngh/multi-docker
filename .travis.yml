@@ -14,7 +14,7 @@ after_success:
   - docker build -t tarunsingh28/multi-server ./server
   - docker build -t tarunsingh28/multi-worker ./worker
   #login in to the docker cli using id and password
-  - docker login -u "$DOCKER_ID" -p "$DOCKER_PASSWORD" --password-stdin
+  - docker login docker.io -u "$DOCKER_ID" -p "$DOCKER_PASSWORD" --password-stdin
   #take those images and push them to 
   - docker push tarunsingh28/multi-client
   - docker push tarunsingh28/multi-nginx
